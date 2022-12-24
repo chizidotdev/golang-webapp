@@ -29,10 +29,10 @@ func main() {
 
 	render.NewTempltes(&app)
 
-	fmt.Println(fmt.Sprintf("App started on port %s", portNumber))
+	fmt.Printf("App started on port %s\n", portNumber)
 
 	srv := &http.Server{
-		Addr: portNumber,
+		Addr:    portNumber,
 		Handler: routes(&app),
 	}
 
